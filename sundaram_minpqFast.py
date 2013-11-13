@@ -19,7 +19,7 @@ def func_next(struct):
 
 
 def exclude_generator():
-    data_tree = example
+    data_tree = minpqFast
     start_value = func(0)
     last_returned = None
     min_border = start_value[0]
@@ -67,6 +67,6 @@ def ithprime(n):
 
 if __name__ == '__main__':
     sun_ex = exclude_generator()
-    for i in xrange(1, 400000):
+    for i in xrange(1, 300000):
         sun_ex.next()
     print sun_ex.next()
