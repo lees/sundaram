@@ -45,8 +45,6 @@ public class SundaramExclude
 		for (int i=0; i<300000-1; i++) 
 		{
 			ex_iter.next();
-			//tmp.peek();
-			//System.out.println(ex_iter.next());
 		}
 		System.out.println(ex_iter.next());
 	}
