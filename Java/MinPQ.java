@@ -1,4 +1,6 @@
 
+// Класс-контейнер реализующий очередь с приоритетами
+
 public class MinPQ<Key extends Comparable<Key>>
 {
 
