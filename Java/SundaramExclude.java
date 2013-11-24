@@ -2,9 +2,9 @@ public class SundaramExclude
 {
 
 	private MinPQ<Iter> data;
-	int last_returned;
-	int min_border;
-	int i;
+	long last_returned;
+	long min_border;
+	long i;
 
 
 	SundaramExclude()
@@ -16,10 +16,10 @@ public class SundaramExclude
 		min_border = data.peek().peek();
 	}
 
-	int next()
+	long next()
 	{
 		Iter iterator = data.pop();
-		int to_return = iterator.peek();
+		long to_return = iterator.peek();
 
 		if (to_return==min_border)
 		{
@@ -42,7 +42,7 @@ public class SundaramExclude
 	public static void main(String[] args) {
 		SundaramExclude ex_iter = new SundaramExclude();
 
-		for (int i=0; i<300000-1; i++) 
+		for (int i=0; i<400000-1; i++) 
 		{
 			ex_iter.next();
 		}

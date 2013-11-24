@@ -1,20 +1,20 @@
 public class Iter implements Comparable<Iter>
 {
-	private int current;
-	private int step;
+	private long current;
+	private long step;
 	
-	public Iter(int i)
+	public Iter(long i)
 	{
 		current = 2*(i+1)*(i+2);
 		step = 2*(i+1)+1;
 	}
 
-	public int peek()
+	public long peek()
 	{
 		return current;
 	}
 
-	public int next()
+	public long next()
 	{
 		current += step;
 		return current;
