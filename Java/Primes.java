@@ -35,7 +35,7 @@ public class Primes
 
 	public static void main(String[] args) 
 	{
-		System.out.println(ithprime(Integer.parseInt(args[0])));
+		System.out.println(ithprime(30000));
 	}
 
 }

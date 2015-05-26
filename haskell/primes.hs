@@ -23,5 +23,4 @@ sundaram_row = sundaram_row' 0
 
 primes = 2: [ 2*i+1 | i <- (exclude [1..] $ sundaram_row)]
 
---main = do putStrLn.show $ primes !! 100000
-main = do putStrLn.show $ sundaram_row !! 400000
+main = do putStrLn.show $ sundaram_row !! 30000
