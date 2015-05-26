@@ -1,4 +1,4 @@
-import itertools
+
 
 def take(n, iterable):
     """Return first n items of the iterable as a list"""
@@ -24,34 +24,16 @@ def imerge(i1, i2):
             el1 = i1.next()
 
 
-'''
-def i_iterator_old(i):
+def i_iterator(i):
     res = 2*(i+1)*(i+2)
     while True:
         yield res
         res += 2*(i+1) + 1
 
 
-i_iterator = lambda i: (2*i*(i+1) + (2*i+1) * j for j in itertools.count())
-
-'''
-def i_iterator(i):
-    return ((2*(i+1)*(i+2) + (2*(i+1)+1) * j) for j in itertools.count())
-
-
-def func(i):
-    return 2*(i+1)*(i+2), 2*(i+1)+1
-
-
-def func_next(struct):
-    (current_value, step) = struct
-    return current_value + step, step
-
-#i_iterator = lambda i: (2*(i+1)*(i+1) + (2*i+1) * j for j in itertools.count())
-
 def exclude_generator():
-    rez = i_iterator(1)
-    i = 2
+    rez = i_iterator(0)
+    i = 1
     last_returned = 0
     while True:
         ichunk = i_iterator(i)
@@ -85,8 +67,5 @@ def ithprime(n):
 
 
 if __name__ == '__main__':
-    sun_ex = exclude_generator()
-    for i in xrange(1, 40000):
-        sun_ex.next()
-    print sun_ex.next()
+    print ithprime(30000)
 
