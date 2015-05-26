@@ -70,7 +70,4 @@ def ithprime(n):
 
 
 if __name__ == '__main__':
-    sun_ex = exclude_generator()
-    for i in xrange(1, 40000):
-        sun_ex.next()
-    print sun_ex.next()
+    print ithprime(30000)
